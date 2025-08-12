@@ -34,7 +34,7 @@ export default function ChatPage() {
                             embedding <-> '${vec}' AS distance
                           FROM vec_tbl
                           ORDER BY distance ASC
-                          LIMIT 1;`)
+                          LIMIT 2;`)
       if (rs[0]?.rows?.length > 0) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         return rs[0].rows.map((row: { [key: string]: any; }) => row.content).join('\n');
